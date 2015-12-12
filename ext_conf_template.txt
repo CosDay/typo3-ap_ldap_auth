@@ -1,0 +1,2 @@
+# cat=basic; type=string; label=Configuration(s) for frontend login. Seperate uids with comma (,). It is used default configuration from extension `ap_ldap` if empty.
+feLoginConfigurationUids =

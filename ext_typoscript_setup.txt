@@ -1,0 +1,20 @@
+config.tx_extbase.persistence.classes {
+	AP\ApLdapAuth\Domain\Model\Mapping {
+		subclasses {
+			fe_users = AP\ApLdapAuth\Domain\Model\Mapping\FeUsers
+		}
+	}
+
+	AP\ApLdapAuth\Domain\Model\Mapping\FeUsers {
+		mapping {
+			recordType = fe_users
+			tableName = tx_apldapauth_domain_model_mapping
+		}
+	}
+
+	AP\ApLdapAuth\Domain\Model\Config {
+		mapping {
+			tableName = tx_apldap_domain_model_config
+		}
+	}
+}

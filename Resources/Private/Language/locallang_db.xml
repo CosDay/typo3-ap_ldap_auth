@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ap_ldap_auth'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_apldapauth_domain_model_mapping.title">Mapping</label>
+			<label index="tx_apldapauth_domain_model_mapping.type">Typ</label>
+			<label index="tx_apldapauth_domain_model_mapping.new_mapping">new Mapping</label>
+			<label index="tx_apldapauth_domain_model_mapping.field">TYPO3-Field</label>
+			<label index="tx_apldapauth_domain_model_mapping.value">Value or name of LDAP-field</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_attribute">Value is name of LDAP attribute</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_image">Value is a image (binary)</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_datetime">Value is a date</label>
+
+			<label index="tx_apldapauth_domain_model_mapping.yes">Yes</label>
+
+
+			<label index="tx_apldap_domain_model_config.be_users_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.be_users_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.be_users_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.be_groups_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.be_groups_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.be_groups_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.fe_users_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.fe_users_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.fe_users_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.fe_groups_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.fe_groups_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.fe_groups_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.tabs.be_users">Backend users</label>
+			<label index="tx_apldap_domain_model_config.tabs.be_groups">Backend groups</label>
+			<label index="tx_apldap_domain_model_config.tabs.fe_users">Frontend users</label>
+			<label index="tx_apldap_domain_model_config.tabs.fe_groups">Frontend groups</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="tx_apldapauth_domain_model_mapping.title">Mapping</label>
+			<label index="tx_apldapauth_domain_model_mapping.type">Typ</label>
+			<label index="tx_apldapauth_domain_model_mapping.new_mapping">neues Mapping</label>
+			<label index="tx_apldapauth_domain_model_mapping.field">TYPO3-Feld</label>
+			<label index="tx_apldapauth_domain_model_mapping.value">Wert bzw. LDAP-Attribut</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_attribute">Wert ist der Name des LDAP-Attributes</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_image">Wert ist ein Bild (binär)</label>
+			<label index="tx_apldapauth_domain_model_mapping.is_datetime">Wert ist ein Datum</label>
+
+			<label index="tx_apldapauth_domain_model_mapping.yes">Ja</label>
+
+
+			<label index="tx_apldap_domain_model_config.be_users_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.be_users_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.be_users_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.be_groups_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.be_groups_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.be_groups_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.fe_users_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.fe_users_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.fe_users_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.fe_groups_base_dn">Base DN:</label>
+			<label index="tx_apldap_domain_model_config.fe_groups_filter">Filter:</label>
+			<label index="tx_apldap_domain_model_config.fe_groups_mapping">Mapping:</label>
+
+			<label index="tx_apldap_domain_model_config.tabs.be_users">Backend-Benutzer</label>
+			<label index="tx_apldap_domain_model_config.tabs.be_groups">Backend-Benutzergruppen</label>
+			<label index="tx_apldap_domain_model_config.tabs.fe_users">Website-Benutzer</label>
+			<label index="tx_apldap_domain_model_config.tabs.fe_groups">Website-Benutzergruppen</label>
+		</languageKey>
+	</data>
+</T3locallang>
