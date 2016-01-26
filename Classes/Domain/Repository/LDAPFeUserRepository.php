@@ -3,7 +3,9 @@ namespace AP\ApLdapAuth\Domain\Repository;
 
 use AP\ApLdap\Exception\LDAPException,
 	TYPO3\CMS\Core\Utility\GeneralUtility,
-	AP\ApLdapAuth\Utility\LDAPConfigUtility;
+	AP\ApLdap\Utility\LDAPUtility,
+	AP\ApLdapAuth\Utility\LDAPConfigUtility,
+	AP\ApLdapAuth\Domain\Model\Mapping\FeUsers;
 
 /**
  * Repository for LDAP frontend users
@@ -22,21 +24,20 @@ class LDAPFEUserRepository extends \AP\ApLdapAuth\Persistence\LdapRepository {
 	 * @throws \AP\ApLdap\Exception\ConnectionException
 	 */
 	public function getAllUsers($configId = 0, $filter = '', $attributes = array()) {
-		if ($configId > 0)
-			$ldapConnections =  array($this->getLDAPConnection($configId));
-		else
-			$ldapConnections = $this->getLDAPConnections();
+		$ldapConnections = $this->getLDAPConnectionsByConfigId($configId);
 
 		$users = array();
 		foreach ($ldapConnections as $ldapConnection) {
 			if (empty($filter))
-				$filter = str_replace('<username>', '*', $ldapConnection->getConfig()->getFeUsersFilter());
+				$filter = $this->getFeUsersFilter($ldapConnection, '*');
 			$baseDn = $ldapConnection->getConfig()->getFeUsersBaseDn();
 			$search = $ldapConnection->search($baseDn, $filter, $attributes);
 			while ($entry = $search->getNextEntry()) {
 				$dn = $entry->getDN();
 				foreach ($entry->getAttributes() as $attribute) {
+					$attribute = strtolower($attribute);
 					$users[$dn][$attribute] = $entry->getValues($attribute);
+					$user[$dn]['configId'] = $ldapConnection->getConfigUid();
 				}
 			}
 		}
@@ -45,33 +46,64 @@ class LDAPFEUserRepository extends \AP\ApLdapAuth\Persistence\LdapRepository {
 	}
 
 	/**
-	 * @param string $dn
+	 * Returns user by uid
+	 *
+	 * @param string $username
 	 * @param int $configId
 	 * @return array|boolean
 	 */
-	public function getUserByDn($dn, $configId = 0) {
-		if ($configId > 0)
-			$ldapConnections =  array($this->getLDAPConnection($configId));
-		else
-			$ldapConnections = $this->getLDAPConnections();
+	public function getUserByUsernameField($username, $configId = 0) {
+		$ldapConnections = $this->getLDAPConnectionsByConfigId($configId);
 
 		$user = false;
 		foreach ($ldapConnections as $ldapConnection) {
 			try {
-				$entry = $ldapConnection->search($dn, '(objectClass=cosdayUser)')->getFirstEntry();
+				$filter = $this->getFeUsersFilter($ldapConnection, ldap_escape($username));
+				$entry = $ldapConnection->search($ldapConnection->getDN(), $filter)->getFirstEntry();
 			} catch (LDAPException $e) {
 				continue;
 			}
 
-			foreach ($entry->getAttributes() as $attribute)
-				$user[$attribute] = $entry->getValues($attribute);
+			if (!empty($entry)) {
+				foreach ($entry->getAttributes() as $attribute) {
+					$attribute = strtolower($attribute);
+					$user[$attribute] = $entry->getValues($attribute);
+				}
+				$user['dn'] = $entry->getDN();
+				$user['configId'] = $ldapConnection->getConfigUid();
+			}
 		}
 
 		return $user;
 	}
 
 	/**
-	 * Check if user exists
+	 * Returns the name of the ldap attribute that is mapped to a given typo3 field
+	 *
+	 * @param string $t3FieldName
+	 * @param int $configId
+	 * @return bool|string		False if no attribute is found
+	 */
+	public function getLDAPAttributeByTypo3FieldName($t3FieldName, $configId = 0) {
+		$ldapConnections = $this->getLDAPConnectionsByConfigId($configId);
+
+		foreach ($ldapConnections as $ldapConnection) {
+			$feUserMapping = $ldapConnection->getConfig()->getFeUsersMapping();
+			/** @var $mapping FeUsers */
+			foreach ($feUserMapping as $mapping) {
+				if (!$mapping->getIsAttribute())
+					continue;
+
+				$typo3FieldName = $mapping->getField();
+				if ($typo3FieldName == $t3FieldName)
+					return strtolower($mapping->getAttribute());
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Check if user exists and we can bind to the user
 	 *
 	 * @param $username
 	 * @param $password
@@ -80,7 +112,7 @@ class LDAPFEUserRepository extends \AP\ApLdapAuth\Persistence\LdapRepository {
 	public function checkUser($username, $password) {
 		$result = false;
 		foreach ($this->getLDAPConnections() as $ldapConnection) {
-			$filter = str_replace('<username>', $username, $ldapConnection->getConfig()->getFeUsersFilter());
+			$filter = $this->getFeUsersFilter($ldapConnection, $username);
 			$baseDn = $ldapConnection->getConfig()->getFeUsersBaseDn();
 			$search = $ldapConnection->search($baseDn, $filter)->getFirstEntry();
 
@@ -112,5 +144,30 @@ class LDAPFEUserRepository extends \AP\ApLdapAuth\Persistence\LdapRepository {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Returns ldap connection(s) by config id
+	 *
+	 * @param int $configId
+	 * @return \AP\ApLdap\Utility\LDAPUtility[]|array
+	 */
+	protected function getLDAPConnectionsByConfigId($configId = 0) {
+		if ($configId > 0)
+			$ldapConnections =  array($this->getLDAPConnection($configId));
+		else
+			$ldapConnections = $this->getLDAPConnections();
+		return $ldapConnections;
+	}
+
+	/**
+	 * Returns frontend users filter with username placeholder replaced
+	 *
+	 * @param LDAPUtility $ldapConnection
+	 * @param string $placeholderReplacement
+	 * @return string
+	 */
+	protected function getFeUsersFilter(LDAPUtility $ldapConnection, $placeholderReplacement = '*') {
+		return str_replace('<username>', $placeholderReplacement, $ldapConnection->getConfig()->getFeUsersFilter());
 	}
 }
