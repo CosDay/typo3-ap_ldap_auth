@@ -11,7 +11,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 	'columns' => array(
 		'be_users_base_dn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_users_base_dn',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_users_base_dn',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -20,7 +20,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'be_users_filter' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_users_filter',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_users_filter',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -29,7 +29,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'be_users_mapping' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_users_mapping',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_users_mapping',
 			'config' => array(
 				'type' => 'text',
 				'eval' => 'trim',
@@ -37,7 +37,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'be_groups_base_dn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_groups_base_dn',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_groups_base_dn',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -46,7 +46,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'be_groups_filter' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_groups_filter',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_groups_filter',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -55,7 +55,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'be_groups_mapping' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.be_groups_mapping',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.be_groups_mapping',
 			'config' => array(
 				'type' => 'text',
 				'eval' => 'trim',
@@ -63,7 +63,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_users_base_dn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_users_base_dn',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_users_base_dn',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -72,7 +72,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_users_filter' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_users_filter',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_users_filter',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -81,7 +81,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_users_mapping' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_users_mapping',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_users_mapping',
 			'config' => array(
 				'type' => 'inline',
 				'foreign_table' => 'tx_apldapauth_domain_model_mapping',
@@ -90,7 +90,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_groups_base_dn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_groups_base_dn',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_groups_base_dn',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -99,7 +99,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_groups_filter' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_groups_filter',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_groups_filter',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -108,7 +108,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 		),
 		'fe_groups_mapping' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.fe_groups_mapping',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.fe_groups_mapping',
 			'config' => array(
 				'type' => 'text',
 				'eval' => 'trim',

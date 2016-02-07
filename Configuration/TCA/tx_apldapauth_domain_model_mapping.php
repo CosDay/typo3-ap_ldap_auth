@@ -11,7 +11,7 @@ $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKe
 
 return array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.title',
+		'title' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.title',
 		'label' => 'value',
 		'label_userFunc' => 'AP\ApLdapAuth\Utility\LDAPMappingUtility->labelUserFunc_getLabel',
 		'type' => 'type',
@@ -35,7 +35,7 @@ return array(
 	'columns' => array(
 		'hidden' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
 				'default' => '0'
@@ -43,7 +43,7 @@ return array(
 		),
 		'type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.type',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.type',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
@@ -54,7 +54,7 @@ return array(
 		),
 		'field' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.field',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.field',
 			'config' => array(
 				'type' => 'select',
 				'itemsProcFunc' => 'AP\ApLdapAuth\Utility\LDAPMappingUtility->itemsProcFunc_getFieldItems',
@@ -64,7 +64,7 @@ return array(
 		),
 		'value' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.value',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.value',
 			'config' => array(
 				'type' => 'input',
 				'size' => '20',
@@ -73,34 +73,34 @@ return array(
 		),
 		'is_attribute' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.is_attribute',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.is_attribute',
 			'config' => array(
 				'type' => 'check',
 				'default' => '1',
 				'items' => array(
-					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.yes', 1)
+					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.yes', 1)
 				)
 			)
 		),
 		'is_image' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.is_image',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.is_image',
 			'config' => array(
 				'type' => 'check',
 				'default' => '0',
 				'items' => array(
-					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.yes', 1)
+					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.yes', 1)
 				)
 			)
 		),
 		'is_datetime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.is_datetime',
+			'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.is_datetime',
 			'config' => array(
 				'type' => 'check',
 				'default' => '0',
 				'items' => array(
-					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.yes', 1)
+					array('LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.yes', 1)
 				)
 			)
 		),
@@ -108,11 +108,11 @@ return array(
 	'palettes' => array(
 		'general' => array(
 			'showitem' => '
-				--div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldap_domain_model_config.tabs.general,type,hidden'
+				--div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldap_domain_model_config.tabs.general,type,hidden'
 		),
 		'mapping' => array(
 			'showitem' => '
-				--div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.title,field,value'
+				--div--;LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.title,field,value'
 		),
 		'checkboxes' => array(
 			'showitem' => '

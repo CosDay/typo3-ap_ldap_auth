@@ -18,7 +18,7 @@ class LDAPMappingUtility implements \TYPO3\CMS\Core\SingletonInterface {
 			else
 				$newTitle .= "<span style=\"color: #a11;\">\"$record[value]\"</span>";
 		} else {
-			$newTitle = "<em>(" . LocalizationUtility::translate('LLL:EXT:ap_ldap_auth/Resources/Private/Language/locallang_db.xml:tx_apldapauth_domain_model_mapping.new_mapping', 'ap_ldap_auth') . ")</em>";
+			$newTitle = "<em>(" . LocalizationUtility::translate('LLL:EXT:ap_ldap_auth/Resources/Private/Language/locallang_db.xlf:tx_apldapauth_domain_model_mapping.new_mapping', 'ap_ldap_auth') . ")</em>";
 		}
 		$params['title'] = $newTitle;
 	}

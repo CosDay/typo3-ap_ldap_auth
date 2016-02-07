@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages"
+		  date="2016-02-08T00:15:00Z" product-name="ap_ldap_auth">
+		<header/>
+		<body>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.title">
+				<source>Mapping</source>
+				<target>Mapping</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldapauth_domain_model_mapping.type">
+				<source>Type</source>
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.new_mapping">
+				<source>new Mapping</source>
+				<target>neues Mapping</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.field">
+				<source>TYPO3-Field</source>
+				<target>TYPO3-Feld</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.value">
+				<source>Value or name of LDAP-field</source>
+				<target>Wert bzw. LDAP-Attribut</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.is_attribute">
+				<source>Value is name of LDAP attribute</source>
+				<target>Wert ist der Name des LDAP-Attributes</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.is_image">
+				<source>Value is a image (binary)</source>
+				<target>Wert ist ein Bild (binär)</target>
+			</trans-unit>
+			<trans-unit id="tx_apldapauth_domain_model_mapping.is_datetime">
+				<source>Value is a date</source>
+				<target>Wert ist ein Datum</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldapauth_domain_model_mapping.yes">
+				<source>Yes</source>
+				<target>Ja</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldap_domain_model_config.be_users_base_dn">
+				<source>Base DN:</source>
+				<target>Base DN:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.be_users_filter">
+				<source>Filter:</source>
+				<target>Filter:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.be_users_mapping">
+				<source>Mapping:</source>
+				<target>Mapping:</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldap_domain_model_config.be_groups_base_dn">
+				<source>Base DN:</source>
+				<source>Base DN:</source>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.be_groups_filter">
+				<source>Filter:</source>
+				<target>Filter:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.be_groups_mapping">
+				<source>Mapping:</source>
+				<target>Mapping:</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldap_domain_model_config.fe_users_base_dn">
+				<source>Base DN:</source>
+				<target>Base DN:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.fe_users_filter">
+				<source>Filter:</source>
+				<target>Filter:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.fe_users_mapping">
+				<source>Mapping:</source>
+				<target>Mapping:</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldap_domain_model_config.fe_groups_base_dn">
+				<source>Base DN:</source>
+				<target>Base DN:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.fe_groups_filter">
+				<source>Filter:</source>
+				<target>Filter:</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.fe_groups_mapping">
+				<source>Mapping:</source>
+				<target>Mapping:</target>
+			</trans-unit>
+
+			<trans-unit id="tx_apldap_domain_model_config.tabs.be_users">
+				<source>Backend users</source>
+				<target>Backend-Benutzer</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.tabs.be_groups">
+				<source>Backend groups</source>
+				<target>Backend-Benutzergruppen</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.tabs.fe_users">
+				<source>Frontend users</source>
+				<target>Website-Benutzer</target>
+			</trans-unit>
+			<trans-unit id="tx_apldap_domain_model_config.tabs.fe_groups">
+				<source>Frontend groups</source>
+				<target>Website-Benutzergruppen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
