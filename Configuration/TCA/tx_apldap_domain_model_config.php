@@ -4,7 +4,7 @@ if (!defined ('TYPO3_MODE')) die ('Access denied.');
 $extKey = 'ap_ldap_auth';
 $extPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey);
 
-return \TYPO3\CMS\Core\Utility\GeneralUtility::array_merge_recursive_overrule($GLOBALS['TCA']['tx_apldap_domain_model_config'], array(
+\TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule($GLOBALS['TCA']['tx_apldap_domain_model_config'], array(
 	'interface' => array(
 		'showRecordFieldList' => $GLOBALS['TCA']['tx_ldap_domain_model_config']['interface']['showRecordFieldList'] . ',be_users_base_dn,be_users_filter,be_users_mapping,be_groups_base_dn,be_groups_filter,be_groups_mapping,fe_users_base_dn,fe_users_filter,fe_users_mapping,fe_groups_base_dn,fe_groups_filter,fe_groups_mapping'
 	),
